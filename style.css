@@ -24,3 +24,214 @@ html:fullscreen,html:fullscreen body{width:100%;height:100%;overflow:hidden;back
 
 @media(max-width:900px){.board-area{gap:8px}.captured-tray{width:110px;min-width:110px}.captured-piece{font-size:36px;width:40px;height:40px}}
 @media(max-width:700px){.game{padding:15px 0}.board-scroll{text-align:left}.board-wrap{margin-left:0;margin-right:0}.captured-tray{width:90px;min-width:90px}.captured-piece{font-size:31px;width:34px;height:34px}.tray-title{font-size:12px}.tray-subtitle{font-size:9px}}
+/* ================================
+   MOBILE RESPONSIVE CHESS
+   ================================ */
+
+@media (max-width: 700px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .game {
+        width: 100%;
+        padding: 10px 8px 20px;
+    }
+
+    .game h1 {
+        font-size: 28px;
+        margin-bottom: 3px;
+    }
+
+    .game #status {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    /* Full-width mobile timers */
+    .timers {
+        width: 100%;
+        min-width: 0;
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+
+    .timer-box {
+        min-width: 0;
+        flex: 1;
+        padding: 7px 9px;
+        border-radius: 7px;
+    }
+
+    .timer-box span {
+        font-size: 12px;
+    }
+
+    .timer-box strong {
+        font-size: 17px;
+    }
+
+    /* Put board and captured pieces vertically */
+    .board-area {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Remove horizontal scrolling */
+    .board-scroll {
+        width: 100%;
+        overflow: visible;
+        padding: 0;
+    }
+
+    /* Responsive board */
+    .board-wrap {
+        width: min(92vw, 560px);
+        min-width: 0;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto;
+    }
+
+    .board {
+        width: 100%;
+        min-width: 0;
+        height: 100%;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        border-width: 3px;
+    }
+
+    /* Responsive squares */
+    .square {
+        width: auto;
+        height: auto;
+        font-size: clamp(28px, 10vw, 52px);
+    }
+
+    /* Captured pieces become compact horizontal panels */
+    .captured-tray {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 58px;
+        padding: 7px 8px;
+        border-radius: 9px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .tray-title {
+        font-size: 11px;
+        white-space: nowrap;
+        margin: 0;
+    }
+
+    .tray-subtitle {
+        display: none;
+    }
+
+    .captured-pieces {
+        width: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 2px;
+    }
+
+    .captured-piece {
+        flex: 0 0 auto;
+        width: 32px;
+        height: 32px;
+        font-size: 28px;
+    }
+
+    #reset {
+        margin-top: 12px;
+        padding: 11px 22px;
+        font-size: 15px;
+    }
+
+    .help {
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    .fullscreen-btn {
+        width: 40px;
+        height: 40px;
+        top: 8px;
+        right: 8px;
+        font-size: 21px;
+    }
+
+    /* Start screen */
+    .start-menu {
+        padding: 16px;
+    }
+
+    .menu-card {
+        width: 100%;
+        max-width: 380px;
+        padding: 28px 20px;
+    }
+
+    .menu-card h1 {
+        font-size: 34px;
+    }
+
+    .timer-option {
+        padding: 13px;
+        font-size: 18px;
+    }
+
+    .start-btn {
+        padding: 13px;
+        font-size: 17px;
+    }
+}
+
+
+/* Very small phones */
+@media (max-width: 380px) {
+
+    .game {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .board-wrap {
+        width: 96vw;
+    }
+
+    .square {
+        font-size: 9vw;
+    }
+
+    .timer-box {
+        padding: 6px;
+    }
+
+    .timer-box span {
+        font-size: 10px;
+    }
+
+    .timer-box strong {
+        font-size: 15px;
+    }
+
+    .captured-piece {
+        width: 28px;
+        height: 28px;
+        font-size: 24px;
+    }
+}
