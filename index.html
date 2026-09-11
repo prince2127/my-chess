@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chess Game</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button id="fullscreenBtn" class="fullscreen-btn" title="Full Screen" aria-label="Full Screen">⛶</button>
+<div id="startMenu" class="start-menu"><div class="menu-card"><h1>♟ Chess</h1><p>Choose your game timer</p><div class="timer-options"><button class="timer-option" data-minutes="10">10 : 10</button><button class="timer-option" data-minutes="30">30 : 30</button><button class="timer-option" data-minutes="60">1 : 1 Hour</button></div><button id="startBtn" class="start-btn" disabled>Start Game</button></div></div>
+<main id="gameScreen" class="game hidden"><h1>♟ Chess</h1><p id="status">White's turn</p><div class="timers"><div class="timer-box" id="blackTimerBox"><span>Black</span><strong id="blackTimer">10:00</strong></div><div class="timer-box" id="whiteTimerBox"><span>White</span><strong id="whiteTimer">10:00</strong></div></div><div class="board-area"><aside class="captured-tray black-tray"><div class="tray-title">Black</div><div class="tray-subtitle">Captured Pieces</div><div id="blackCaptured" class="captured-pieces" aria-label="Captured black pieces"></div></aside><div class="board-scroll"><div class="board-wrap"><div id="board" class="board" aria-label="Chess board"></div><div id="winnerOverlay" class="winner-overlay" aria-live="assertive"></div></div></div><aside class="captured-tray white-tray"><div class="tray-title">White</div><div class="tray-subtitle">Captured Pieces</div><div id="whiteCaptured" class="captured-pieces" aria-label="Captured white pieces"></div></aside></div><button id="reset">New Game</button><p class="help">Click a piece, then click its destination square.</p></main>
+<script src="script.js"></script>
+</body></html>
